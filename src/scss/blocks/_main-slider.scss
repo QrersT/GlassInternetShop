@@ -1,0 +1,133 @@
+/* .main__wrapper {
+  position: relative;
+  width: 100%;
+  min-height: 700px;
+}
+.main-page__slider,
+.main-page__slider_second {
+  border: 2px solid $main-blue;
+  margin-top: 50px;
+  position: absolute;
+  width: 40%;
+  right: 5%;
+}
+.main-page__slider_second {
+  top: 20%;
+  right: calc(40%);
+  z-index: 0;
+}
+
+.swiper {
+  &-slide {
+    img {
+      width: 100%;
+      height: 100%;
+    }
+  }
+}
+
+.navbar__logo {
+  display: inline-block;
+  transform: skewX(180deg);
+}
+.swiper__span {
+  position: absolute;
+  left: 50%;
+  top: 40px;
+  padding: 5px 20px;
+  transform: skewX(-30deg) translateX(-50%);
+  background-color: $main-blue;
+}
+
+.swiper__span_title {
+  display: inline-block;
+  color: #fff;
+  font-size: 40px;
+  font-weight: bold;
+  transform: skewX(30deg);
+}
+.content {
+  height: 600px;
+}
+
+.main-page__slider,
+.main-page__slider_second {
+  .swiper-slide {
+  }
+} */
+
+.main-slider {
+  &__title {
+    margin-left: 35%;
+    text-align: center;
+    margin-bottom: 30px;
+  }
+}
+
+.main-slider__slider {
+  overflow: hidden;
+  border: none;
+  position: relative;
+  width: 65%;
+  /*  height: 600px; */
+  @include adaptiv-value("height", 500, 200, 1);
+}
+.main-slider__wrapper {
+  display: flex;
+  justify-content: space-between;
+}
+
+.main-slider__container {
+  color: #000;
+  padding: 87px 20px; /* 57px */
+
+  background: rgba($color: #fff, $alpha: 0.6);
+}
+
+.swiper-wrapper {
+}
+
+.swiper-button-next,
+.swiper-button-prev {
+  width: 40px;
+  height: 40px;
+  background-color: $main-blue;
+  border: 1px solid $main-white;
+  transition: all 0.3s ease 0s;
+  &::after {
+    /* background: url("../../fonts/icons/rightArrow.svg") center center/cover no-repeat;
+    color: transparent; */
+    font-size: 20px;
+    color: $main-yellow;
+    transition: all 0.3s ease 0s;
+    background: transparent;
+  }
+
+  &:hover {
+    background-color: #004164;
+    &::after {
+      color: $main-orange;
+    }
+  }
+}
+.swiper-button-next {
+}
+
+._main-slider__slide {
+  border: 1px solid #fff;
+  img {
+    /*   object-fit: cover; */
+    background-repeat: no-repeat;
+    width: 100%;
+    height: 100%;
+  }
+  /*   &:nth-child(1) {
+    background-color: red;
+  }
+  &:nth-child(2) {
+    background-color: blue;
+  }
+  &:nth-child(3) {
+    background-color: yellow;
+  } */
+}

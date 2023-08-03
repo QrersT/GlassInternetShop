@@ -1,0 +1,29 @@
+.footer {
+  background: #c7c7c7;
+  padding: 30px 0;
+  &__container {
+  }
+  &__content {
+    display: flex;
+    justify-content: space-between;
+  }
+  &__block {
+    display: flex;
+    flex-direction: column;
+  }
+  &__title {
+    flex: 1 0 auto;
+  }
+  &__list {
+  }
+  &__list_item {
+  }
+  &__list_link {
+  }
+  &__rights {
+    text-align: center;
+    margin-top: 30px;
+  }
+}
+._container {
+}

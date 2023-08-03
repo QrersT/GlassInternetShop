@@ -1,0 +1,93 @@
+//reusable stiles
+._title {
+}
+.btn {
+  display: inline-flex;
+  padding: 0px 0px;
+  @media (min-width: ($md2 + px)) {
+    &:hover {
+    }
+  }
+}
+
+._hover-gradient-text,
+._hover-gradient-bg {
+  transition: all 0.3s ease 0s;
+  background: linear-gradient(to right, $main-yellow, $main-orange 50%, #fff 50%);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-size: 200% 100%;
+  background-position: 100%;
+  position: relative;
+  &::before {
+    z-index: 2;
+    position: absolute;
+    content: "";
+    left: 0;
+    bottom: -5px;
+    height: 1px;
+    width: 0;
+    transition: all 0.3s ease 0s;
+    background-color: #fb8500;
+  }
+  @media (any-hover: hover) {
+    &:hover {
+      &::before {
+        width: 100%;
+      }
+      /* color: #cdd0d3; */
+      background-position: 0 100%;
+    }
+  }
+}
+
+._hover-gradient-bg {
+  background-clip: inherit;
+  -webkit-text-fill-color: currentColor;
+  &::before {
+    width: 100%;
+    height: 0;
+  }
+  @media (any-hover: hover) {
+    &:hover {
+      &::before {
+        width: 100%;
+        height: 0;
+      }
+      /* color: #cdd0d3; */
+      background-position: 0 100%;
+    }
+  }
+}
+
+.header {
+  width: 100%;
+  position: absolute;
+}
+
+._header-sticky {
+  position: fixed;
+}
+.header._header-sticky {
+  position: fixed;
+  box-shadow: 0 5px 16px rgba(0, 0, 0, 0.1);
+  /*  padding: 8px 0; */
+  backdrop-filter: blur(10px);
+  animation: slideDown 0.35s ease-out;
+}
+.page-header.is-sticky img {
+  max-width: 80%;
+}
+.page-header.is-sticky button {
+  font-size: 14px;
+  padding: 7px 10px;
+}
+@keyframes slideDown {
+  from {
+    transform: translateY(-100%);
+  }
+  to {
+    transform: translateY(0);
+  }
+}
